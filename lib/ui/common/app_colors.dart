@@ -14,12 +14,20 @@ const Color kcLightGrey = Color(0xFFFAFAFA);
 const Color kcOrange = Color(0xFFDD6700);
 const Color kcBackgroundColor = Color(0xFFFFF3DB);
 
+// Auth UI Colors
+const Color kcPrimaryBlue = Color(0xFF2563EB); // Web design primary blue
+const Color kcFormBorderColor = Color(0xFFE5E7EB);
+const Color kcTextLightColor = Color(0xFF6B7280);
+const Color kcSuccessGreen = Color(0xFF10B981);
+const Color kcSuccessGreenLight = Color(0xFFD1FAE5);
+const Color kcButtonDisabledColor = Color(0xFFE5E7EB);
+const Color kcButtonDisabledTextColor = Color(0xFF9CA3AF);
 
-   LinearGradient customOnboardingGradient = LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-    colors: [
-      const Color(0xFF110C1D).withOpacity(0.0),
-      const Color(0xFF110C1D),
-    ],
-  );
+LinearGradient customOnboardingGradient = LinearGradient(
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+  colors: [
+    const Color(0xFF110C1D).withOpacity(0.0),
+    const Color(0xFF110C1D),
+  ],
+);
