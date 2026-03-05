@@ -1,4 +1,4 @@
-package com.example.scrubly;
+package com.example.jobcenter247;
 
 import io.flutter.embedding.android.FlutterActivity;
 
