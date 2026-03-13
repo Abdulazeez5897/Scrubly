@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "139685048794",
+    "project_id": "job-center-ebdae",
+    "storage_bucket": "job-center-ebdae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139685048794:android:bf1dd8593f5b24b83350e3",
+        "android_client_info": {
+          "package_name": "com.example.jobcenter247"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgCHIdJLE7N_5Yy_E9cfX7XajYARgdbbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
