@@ -1,4 +1,4 @@
-import 'package:_247remotejobs/core/data/repositories/repository-interface.dart';
+import 'package:jobcenter247/core/data/repositories/repository-interface.dart';
 
 import '../../../app/app.locator.dart';
 import '../../network/api-responses.dart';

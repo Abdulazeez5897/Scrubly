@@ -8,8 +8,10 @@ import '../services/authentication_service.dart';
 import '../ui/dialogs/info_alert_dialog.dart';
 
 import '../ui/views/login/login_view.dart';
-import '../ui/views/homeView.dart';
+import '../ui/views/home_view.dart';
 import '../ui/views/dashboard.dart';
+import '../ui/views/startup_view.dart';
+import '../ui/views/specialist_onboarding/specialist_onboarding_view.dart';
 // @stacked-import
 /// @author Usman Abdulazeez
 /// email: abdulazeezusman732@gmail.com
@@ -20,12 +22,11 @@ import '../ui/views/dashboard.dart';
   logger: StackedLogger(),
   routes: [
     MaterialRoute(page: HomeView),
-    // MaterialRoute(page: StartupView),
+    MaterialRoute(page: StartupView, initial: true),
     MaterialRoute(page: LoginView),
     MaterialRoute(page: DashboardView),
+    MaterialRoute(page: SpecialistOnboardingView),
 
-    // MaterialRoute(page: NotificationView),
-    // MaterialRoute(page: ProfileView),
 // @stacked-route
   ],
   dependencies: [

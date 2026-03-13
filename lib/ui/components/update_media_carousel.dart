@@ -1,6 +1,6 @@
-import 'package:_247remotejobs/ui/components/shimmer_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:jobcenter247/ui/components/shimmer_widgets.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -37,7 +37,7 @@ class _UpdateMediaCarouselState extends State<UpdateMediaCarousel> {
 
   void _initializeVideo(int index) async {
     if (_videoControllers[index] == null && _isVideo(widget.mediaUrls[index])) {
-      final controller = VideoPlayerController.network(widget.mediaUrls[index]);
+      final controller = VideoPlayerController.networkUrl(Uri.parse(widget.mediaUrls[index]));
       await controller.initialize();
       setState(() {
         _videoControllers[index] = controller..setLooping(true);

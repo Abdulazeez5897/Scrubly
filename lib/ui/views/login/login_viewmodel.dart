@@ -51,25 +51,14 @@ class LoginViewModel extends BaseViewModel {
     setBusy(true);
 
     try {
-      final role = await _authenticationService.loginWithEmail(
-        email: emailController.text.trim(),
-        password: passwordController.text,
-      );
+      // Mocking a 2-second delay for the sign in process
+      await Future.delayed(const Duration(seconds: 2));
 
-      if (role != null) {
-        // Clear history and navigate to Dashboard
-        await _navigationService.clearStackAndShow(Routes.dashboardView);
-      } else {
-        await _dialogService.showDialog(
-          title: 'Login Error',
-          description: 'Login failed. Could not fetch user role.',
-        );
-      }
+      // After delay, clear stack and navigate to the dashboard
+      await _navigationService.clearStackAndShow(Routes.dashboardView);
     } catch (e) {
-      await _dialogService.showDialog(
-        title: 'Login Error',
-        description: e.toString().replaceAll('Exception: ', ''),
-      );
+      // In a real app we'd show an error dialog here
+      debugPrint("Login failed: $e");
     } finally {
       setBusy(false);
     }
