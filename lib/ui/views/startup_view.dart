@@ -64,10 +64,11 @@ class StartupView extends StackedView<StartupViewModel> {
               child: Text(
                 '247 Job Center',
                 style: TextStyle(
-                  fontSize: getResponsiveMassiveFontSize(context),
-                  fontWeight: FontWeight.w800,
+                  fontSize: 28, // Standard bold mobile title size
+                  fontWeight: FontWeight.w900, // Very bold
                   color: kcWhiteColor,
-                  letterSpacing: 1.2,
+                  letterSpacing: 2.0, // Extra spacing for an elegant look
+                  height: 1.2,
                 ),
               ),
             ),

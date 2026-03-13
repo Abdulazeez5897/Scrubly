@@ -51,6 +51,15 @@ double quarterScreenWidth(BuildContext context) =>
 
 double getResponsiveHorizontalSpaceMedium(BuildContext context) =>
     screenWidthFraction(context, dividedBy: 10);
+
+// Returns a responsive tiny font size based on the screen width
+double getResponsiveTinyFontSize(BuildContext context) {
+  // Grab the screen width (fallback to 375 if it fails)
+  double screenWidth = MediaQuery.of(context).size.width;
+  // Calculate roughly 3% of the screen width, capping it so it doesn't get too big or small
+  return (screenWidth * 0.03).clamp(10.0, 14.0); 
+}
+
 double getResponsiveSmallFontSize(BuildContext context) =>
     getResponsiveFontSize(context, fontSize: 14, max: 15);
 

@@ -1,14 +1,12 @@
-import 'package:stacked/stacked.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+
 import '../../../../app/app.locator.dart';
 import '../../../../app/app.router.dart';
-import '../../../../services/authentication_service.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class LoginViewModel extends BaseViewModel {
-  final _authenticationService = locator<AuthenticationService>();
   final _navigationService = locator<NavigationService>();
-  final _dialogService = locator<DialogService>();
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -54,10 +52,9 @@ class LoginViewModel extends BaseViewModel {
       // Mocking a 2-second delay for the sign in process
       await Future.delayed(const Duration(seconds: 2));
 
-      // After delay, clear stack and navigate to the dashboard
-      await _navigationService.clearStackAndShow(Routes.dashboardView);
+      // After delay, navigate to the dashboard
+      await _navigationService.replaceWithDashboardView();
     } catch (e) {
-      // In a real app we'd show an error dialog here
       debugPrint("Login failed: $e");
     } finally {
       setBusy(false);

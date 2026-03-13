@@ -11,7 +11,7 @@ class StartupViewModel extends BaseViewModel {
     // Wait for 4 seconds as requested
     await Future.delayed(const Duration(seconds: 4));
 
-    // Navigate to the LoginView and clear the history
-    await _navigationService.replaceWith(Routes.loginView);
+    // Navigate to the OnboardingView and clear the history
+    await _navigationService.replaceWithOnboardingView();
   }
 }

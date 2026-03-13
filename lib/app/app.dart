@@ -12,6 +12,7 @@ import '../ui/views/home_view.dart';
 import '../ui/views/dashboard.dart';
 import '../ui/views/startup_view.dart';
 import '../ui/views/specialist_onboarding/specialist_onboarding_view.dart';
+import '../ui/views/onboarding/onboarding_view.dart';
 // @stacked-import
 /// @author Usman Abdulazeez
 /// email: abdulazeezusman732@gmail.com
@@ -26,7 +27,7 @@ import '../ui/views/specialist_onboarding/specialist_onboarding_view.dart';
     MaterialRoute(page: LoginView),
     MaterialRoute(page: DashboardView),
     MaterialRoute(page: SpecialistOnboardingView),
-
+    MaterialRoute(page: OnboardingView),
 // @stacked-route
   ],
   dependencies: [
